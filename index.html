@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <audio id="myAudio" autoplay="muted">
+        <source src="song1.mp3">
+    </audio>
+    <script>
+    window.onload = function() {
+        var audio = document.getElementById('myAudio');
+        audio.muted = false; // Unmute after page load
+        audio.play().catch(error => {
+            console.log('Autoplay blocked:', error);
+        });
+    };
+</script>
+<script>
+    window.onload = function() {
+        var audio = document.getElementById('myAudio');
+        audio.play().then(() => {
+            console.log('Audio is playing');
+        }).catch(error => {
+            console.log('Audio playback blocked:', error);
+        });
+    };
+</script>
+
+ 
+
+  
+  
+  
+  
+    <div class="container">
+        <h1>Happy Birthday, Meri Jaan!</h1>
+        <p>May god bless you with lots of happiness and love. Always be happy and healthy.</p>
+        <button onclick="navigateToPage('page2.html')">Next</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

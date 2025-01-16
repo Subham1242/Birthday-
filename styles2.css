@@ -1,0 +1,51 @@
+/* Page 2 specific styles */
+body {
+    font-family: Arial, Comic Sans MS;
+    font-size: 18px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    text-align: center;
+    padding: 50px;
+    color: black;
+    margin: 0; /* Remove default margin */
+    position: relative; /* Ensure ::before element is positioned relative to the body */
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
+}
+
+/* Watermark background image */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('photo2.jpg'); /* Make sure 'photo2.jpg' exists */
+    background-size: cover;
+    background-position: center; /* Center the image */
+    opacity: 0.1; /* Slight opacity for watermark effect */
+    z-index: -1; /* Keep the background image behind the content */
+}
+
+/* Smaller image size */
+.content img {
+    width: 10px; /* Smaller size for front image */
+    vertical-align: middle;
+    margin: 0.5px;
+}
+
+/* Container styles */
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* Headings and paragraphs styling */
+h1, p {
+    margin: 0;
+    padding: 10px;
+}
